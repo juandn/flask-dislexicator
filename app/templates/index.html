@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dislexicator</title>
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/bulma-divider.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+  	body {font-family: 'Nunito', sans-serif;};
+    nav.navbar {
+      height: 6rem !important;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06) !important;
+    }
+    ::-webkit-scrollbar{height:10px;width:10px}::-webkit-scrollbar-track{background:#efefef;border-radius:6px}::-webkit-scrollbar-thumb{background:#d5d5d5;border-radius:6px}::-webkit-scrollbar-thumb:hover{background:#c4c4c4}
+  </style>
+</head>
+
+<body style="display: flex; min-height: 100vh; flex-direction: column;"></body>
+  <!-- START NAV -->
+  <nav class="navbar is-light">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="../">
+            <h1 class="is-family-monospace has-text-weight-bold	is-size-3">Dislexycator</h1>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAV -->
+
+  
+
+  <!-- newsletter -->
+  <section class="section" style="flex: 1; display: flex; flex-direction: column;">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="container has-text-centered">
+          <div class="hero is-light">
+            <div class="hero-body">
+              <h2 class="title is-4">Introduce el texto</h2>
+              <div class="block">  
+                <form class="is-full" action="/" method="POST">
+                    <div class="field">
+                        <div class="control">
+                            <textarea class="textarea" name="inputTexto" placeholder="Texto a procesar"></textarea>
+                        </div>
+                    </div>
+                        <div class="field">
+                            <button class="button is-primary" type="submit" >Obtener Resultado</button>
+                        </div>
+                </form>
+            </div>  
+            <div class="block">
+              <div class="field">
+                <div class="control">
+                    <textarea class="textarea" placeholder="Resultado">{{ distext }}</textarea>
+                </div>
+              </div>
+            </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Dislexicator</strong> by <a href="https://gonzalojs.com">Juan Manuel Díaz Nevado</a>. 
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
