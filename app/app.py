@@ -8,14 +8,15 @@ def home():
     if request.method == 'POST':
         print(request)
         data =  request.form["inputTexto"]
-        return render_template("index.html", distext=dyslexicate(data))
+        opt= request.form.getlist('opt')
+        return render_template("index.html", distext=dyslexicate(data,opt), text=data, opt=opt)
     return render_template("index.html", title="Jinja and Flask")
 
 
-def dyslexicate(text):
+def dyslexicate(text, opt):
     result = ''
     for word in text.split():
-        result += dyslexicate_word(word,['-f3'])+' '
+        result += dyslexicate_word(word,opt)+' '
     return result                
 
 def dyslexicate_word(word, opts):
